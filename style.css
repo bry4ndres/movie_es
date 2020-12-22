@@ -1,0 +1,214 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 62.5%;
+    font-family: 'PT Sans', sans-serif;
+}
+
+img
+{
+    width: 100%;
+}
+
+.grid-container
+{
+    display: grid;
+    grid-template-columns: 75px 1fr; 
+    grid-template-rows: 70px 1fr 70px; 
+    grid-template-areas: "header header header"
+                         "nav main main"
+                         "nav main main";
+    align-items: center;
+    height: 100vh;
+}
+
+/*Header*/
+.header
+{
+    grid-area: header;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.24); 
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.24);
+    position: relative;
+    z-index: 1;
+}
+
+.logo
+{
+    width: 20%;
+    height: auto;
+    margin-left: 20px ;
+    display: flex;
+    align-items: center;
+}
+
+.logo__img
+{
+    width: 35px;
+    height: auto;
+}
+
+.logo__title
+{
+    font-size: 2.4rem;
+    -webkit-text-stroke: 0.1rem #FF6B69; 
+    color: transparent;
+}
+
+.search
+{
+    width: 40%;
+}
+.search__input
+{
+    max-width: 350px;
+    border-radius: 8px;
+    height: 35px;
+    width: 100%;
+    border: 1px solid #B9B7C0;
+}
+
+.account
+{
+    width: 20%;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 700;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+
+.account__img
+{
+    background-image: url("https://lh3.googleusercontent.com/ogw/ADGmqu80Zi5mlBSN1wgzdqZLPwDe5gBHqdWkF3G4N9HP=s32-c-mo");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    border:rgba(0, 0, 0, 0.336) 2px solid;
+}
+
+.account__config
+{
+    align-self: center;
+    width: 20px;
+    height: 40px;
+    font-size: 25px;
+}
+
+/*Nav*/
+.nav
+{
+    grid-area: nav;
+    background-color: #FF5A5E;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.nav__buttons
+{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav__button
+{
+    margin-top: 45%
+}
+.nav__option
+{
+    margin-bottom: 10%;
+}
+
+[class^="logonav fas fa"]
+{
+    color: white;
+    font-size: 3rem;
+}
+
+/*Main*/
+.main
+{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.lista
+{
+    display: grid;
+    grid-template: repeat(6,auto)/ 1fr;
+    gap: 10px 10px;
+    width: 100%;
+}
+
+.movie-section
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.movie
+{
+    max-width: 300px;
+    min-width: 100px;
+    position: relative;
+}
+
+.movie__info
+{
+    position: absolute;
+    bottom: 0;
+    background-color: #ff5a5daf;
+    max-height: 50%;
+    min-height: 30%;
+    color: white;
+    padding-left: 15px;
+}
+
+.movie-clas
+{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left: 8%;
+}
+
+.movie__title
+{
+    font-size: 1.8rem;
+}
+
+.movie__description
+{
+    font-size: 1rem;
+}
