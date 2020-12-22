@@ -175,7 +175,6 @@ img
 {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .movie
@@ -211,4 +210,177 @@ img
 .movie__description
 {
     font-size: 1rem;
+}
+
+@media screen and (max-width:1027px)
+{
+    .movie
+    {
+        width: 220px;
+        height: 100%;
+        position: relative;
+    }
+}
+
+@media screen and (max-width:1027px)
+{
+    .movie
+    {
+        width: 220px;
+        height: 100%;
+        position: relative;
+    }
+
+    .movie-clas
+    {
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:1027px)
+{
+    .movie
+    {
+        width: 200px;
+        height: 125px;
+        position: relative;
+       margin-right: 10px;
+    }
+
+    .movie-section
+    {
+        flex-wrap: wrap;
+    }
+
+    
+}
+
+@media screen and (max-width:767px)
+{
+    .grid-container
+    {
+        display: grid;
+        grid-template-columns: 75px 1fr; 
+        grid-template-rows: 70px  70px 1fr; 
+        grid-template-areas: "header header header"
+                             "nav nav nav"
+                             "main main main";
+        align-items: center;
+        height: 100vh;
+    }
+
+    .nav
+    {
+        grid-area: nav;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .nav__buttons
+    {
+        width: auto;
+        flex-direction: row;
+    }
+
+    .nav__button
+    {
+        margin: 0 15px;
+    }
+
+    .nav__option
+    {
+        margin: 0 15px;
+    }
+
+    [class^="logonav fas fa"]
+    {
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    .main
+    {
+        grid-area: main;
+    }
+    /* .lista
+    {
+        display: grid;
+        grid-template: repeat(6,auto)/ 1fr;
+        gap: 10px 10px;
+        width: 100%;
+    } */
+
+    .movie
+    {
+        margin-bottom: 50px;
+        width: 250px;
+    }
+
+    .logo
+    {
+        width: 15%;
+    }
+
+    .logo__title
+    {
+        font-size: 2rem;
+    }
+
+    .account
+    {
+        width: 10%;
+        margin-right:5px;
+    }
+
+    .account__name
+    {
+        font-size: 2rem;
+    }
+
+    .account__img
+    {
+        display: none;
+    }
+
+    .search__input
+    {
+        
+        max-width: 170px;
+    }
+
+    .account__config
+    {
+        margin-left: 5px;
+        font-size: 1.5rem;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:427px)
+{
+    .logo
+    {
+        width: 10%;
+        margin-left: 5px;
+    }
+
+    .logo__title
+    {
+        font-size: 1.2rem;
+    }
+
+    .account
+    {
+        width: 10%;
+    }
+    .account__name
+    {
+        font-size: 1.4rem;
+    }
+
+    .nav
+    {
+        font-size: 1.5rem;
+    }
 }
